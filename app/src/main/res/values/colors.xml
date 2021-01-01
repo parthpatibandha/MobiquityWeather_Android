@@ -3,4 +3,21 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorTextPrimary">#333333</color>
+    <color name="colorTextSecondary">#80333333</color>
+    <color name="colorTextWhite">#F6F7F9</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorTransparentBlack">#64000000</color>
+    <color name="colorTransparentWhite">#a1ffffff</color>
+    <color name="colorStroke">#979797</color>
+    <color name="colorShadow">#E4E4E4</color>
+    <color name="colorOrange">#FFAB00</color>
+    <color name="colorPurple">#400295</color>
+    <color name="colorGreen">#03A446</color>
+    <color name="colorRed">#FF0000</color>
+
 </resources>

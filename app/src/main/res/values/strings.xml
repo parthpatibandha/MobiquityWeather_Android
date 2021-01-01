@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">Application</string>
+    <string name="app_name">Food Delivery</string>
+
+    <string name="map_key" translatable="false">AIzaSyBnEVruXG2tdtbadZtqLwt9EmFI6XYEOV0</string>
+
+    <!--Exception message-->
+    <string name="exception_error_network">Internet connection not found.</string>
+    <string name="exception_error_server">Server is under maintenance, please try after some time.</string>
+    <string name="exception_error_unparceble">Unknown data found from server.</string>
+    <string name="exception_error_database">Database error</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="price_rest">Price: %s</string>
+
+    <string name="restaurant_open">Restaurant is OPEN now</string>
+    <string name="restaurant_closed">Restaurant is CLOSED!</string>
+
+    <string name="search_hint">Search for restaurants, cuisines...</string>
+    <string name="loading_more">Loading..</string>
+
 </resources>

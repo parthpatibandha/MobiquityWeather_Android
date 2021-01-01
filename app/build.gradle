@@ -2,15 +2,16 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-parcelize'
+
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "29.0.0"
+    compileSdkVersion 30
     defaultConfig {
         applicationId "org.codejudge.application"
-        minSdkVersion 15
-        targetSdkVersion 28
+        minSdkVersion 19
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -20,6 +21,33 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        staging {
+            dimension "version"
+            // applicationIdSuffix ".staging"
+            buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
+        }
+
+        local {
+            dimension "version"
+            // applicationIdSuffix ".local"
+            buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
+        }
+
+        live {
+            dimension "version"
+            // applicationIdSuffix ".live"
+            buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 
@@ -32,4 +60,35 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Kotlin coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlincoroutine_version"
+
+    //Support
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+
+    //Koin for Android
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-android-scope:$koin_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+
+    //Retrofit & okhttp
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+
+    //Others
+    implementation "com.google.code.gson:gson:$gson_version"
+    implementation "net.danlew:android.joda:$jodatime_version"
+    implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
 }
