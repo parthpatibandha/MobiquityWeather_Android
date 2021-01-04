@@ -20,29 +20,36 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    flavorDimensions "version"
-    productFlavors {
-        staging {
-            dimension "version"
-            // applicationIdSuffix ".staging"
             buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
         }
-
-        local {
-            dimension "version"
-            // applicationIdSuffix ".local"
-            buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
-        }
-
-        live {
-            dimension "version"
-            // applicationIdSuffix ".live"
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
         }
     }
+
+//    flavorDimensions "version"
+//    productFlavors {
+//        staging {
+//            dimension "version"
+//            // applicationIdSuffix ".staging"
+//            buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
+//        }
+//
+//        local {
+//            dimension "version"
+//            // applicationIdSuffix ".local"
+//            buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
+//        }
+//
+//        live {
+//            dimension "version"
+//            // applicationIdSuffix ".live"
+//            buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
+//        }
+//    }
+
     dataBinding {
         enabled true
     }

@@ -7,8 +7,6 @@ import org.codejudge.application.domain.network.HomeApiService
 import org.koin.dsl.module.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.net.CookieManager
-import java.net.CookiePolicy
 import java.util.concurrent.TimeUnit
 
 /**
