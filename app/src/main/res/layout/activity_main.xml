@@ -7,69 +7,9 @@
     android:background="@color/colorWhite"
     tools:context=".presentation.home.MainActivity">
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_search"
-        style="@style/edtStyle"
+    <FrameLayout
+        android:id="@+id/frameContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_8"
-        android:drawableStart="@drawable/ic_search"
-        android:drawablePadding="@dimen/margin_16"
-        android:hint="@string/search_hint"
-        android:padding="@dimen/margin_8"
-        android:textSize="@dimen/text_body2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivCancel"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="@dimen/margin_16"
-        android:padding="4dp"
-        android:src="@drawable/icn_cancel"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/edit_search"
-        app:layout_constraintEnd_toEndOf="@id/edit_search"
-        app:layout_constraintTop_toTopOf="@id/edit_search"
-        tools:visibility="visible" />
-
-    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/margin_8"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_search"
-        app:shimmer_demo_angle="20"
-        app:shimmer_demo_child_count="4"
-        app:shimmer_demo_layout="@layout/shimmer_cell_restaurant_item"
-        app:shimmer_demo_layout_manager_type="linear_vertical"
-        tools:itemCount="4"
-        tools:listitem="@layout/cell_restaurant_item" />
-
-    <LinearLayout
-        android:id="@+id/llPagination"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorTransparentWhite"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:visibility="visible">
-
-        <ProgressBar
-            android:layout_width="30dp"
-            android:layout_height="30dp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/tvStyleRegular"
-            android:text="@string/loading_more"
-            android:textColor="@color/colorTextPrimary" />
-
-    </LinearLayout>
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

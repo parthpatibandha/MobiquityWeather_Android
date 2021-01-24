@@ -9,7 +9,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "org.codejudge.application"
+        applicationId "org.android.application"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
@@ -20,12 +20,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
+            buildConfigField "String", "SERVER_URL_NEW", '"http://api.openweathermap.org/data/2.5/"'
         }
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "SERVER_URL_NEW", '"https://maps.googleapis.com/maps/api/"'
+            buildConfigField "String", "SERVER_URL_NEW", '"http://api.openweathermap.org/data/2.5/"'
         }
     }
 
@@ -71,6 +71,9 @@ dependencies {
     //Kotlin coroutine
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlincoroutine_version"
 
+    implementation "androidx.room:room-runtime:2.2.5"
+    kapt "androidx.room:room-compiler:2.2.5"
+
     //Support
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
@@ -97,5 +100,13 @@ dependencies {
     implementation "net.danlew:android.joda:$jodatime_version"
     implementation 'com.github.sharish:ShimmerRecyclerView:v1.3'
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation 'com.pixplicity.easyprefs:library:1.9.0'
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.thanosfisherman.mayi:mayi:2.1'
+    
 
 }

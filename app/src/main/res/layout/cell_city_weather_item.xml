@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            style="@style/tvStyleRegular"
+            tools:text="January 23, 4:22PM" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTempratureLike"
+            style="@style/tvStyleRegular"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_body"
+            tools:text="Feels like 27" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/margin_48"
+            android:layout_height="@dimen/margin_48"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescription"
+            style="@style/tvStyleRegular"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_body"
+            tools:text="Smoke" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTemprature"
+        style="@style/tvStyleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/margin_48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="27" />
+
+    <LinearLayout
+        android:id="@+id/llData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/llContent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/tvStyleRegular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/wind"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_caption" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWind"
+                style="@style/tvStyleRegular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_caption"
+                tools:text="wind" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/tvStyleRegular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/humidity"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_caption" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHumidity"
+                style="@style/tvStyleRegular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_caption"
+                tools:text="wind" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/tvStyleRegular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/sunrise"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_caption" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSunrise"
+                style="@style/tvStyleRegular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_caption"
+                tools:text="wind" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/tvStyleRegular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/sunset"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_caption" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSunset"
+                style="@style/tvStyleRegular"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_caption"
+                tools:text="wind" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@color/colorDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llData" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

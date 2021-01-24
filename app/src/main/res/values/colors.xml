@@ -19,5 +19,7 @@
     <color name="colorPurple">#400295</color>
     <color name="colorGreen">#03A446</color>
     <color name="colorRed">#FF0000</color>
+    <color name="colorBlue">#3391D8</color>
+    <color name="colorDivider">#979797</color>
 
 </resources>

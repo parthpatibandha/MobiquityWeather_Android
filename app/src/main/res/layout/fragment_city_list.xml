@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/colorWhite" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_search"
+        style="@style/edtStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_48"
+        android:layout_margin="@dimen/margin_8"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/margin_16"
+        android:hint="@string/search_hint"
+        android:imeOptions="actionSearch"
+        android:inputType="textCapSentences"
+        android:lines="1"
+        android:padding="@dimen/margin_8"
+        android:textColorHint="@color/colorDivider"
+        android:textSize="@dimen/text_body2"
+        app:layout_constraintEnd_toStartOf="@id/ivMore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMore"
+        android:layout_width="@dimen/margin_48"
+        android:layout_height="@dimen/margin_48"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:background="@drawable/edit_text_unselected"
+        android:padding="4dp"
+        android:src="@drawable/icn_more"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/edit_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_search"
+        tools:visibility="visible" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:padding="4dp"
+        android:src="@drawable/icn_cancel"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/edit_search"
+        app:layout_constraintEnd_toEndOf="@id/edit_search"
+        app:layout_constraintTop_toTopOf="@id/edit_search"
+        tools:visibility="visible" />
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_8"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_search"
+        app:shimmer_demo_angle="20"
+        app:shimmer_demo_child_count="4"
+        app:shimmer_demo_layout="@layout/shimmer_cell_restaurant_item"
+        app:shimmer_demo_layout_manager_type="linear_vertical"
+        tools:itemCount="4"
+        tools:listitem="@layout/cell_city_item" />
+
+    <LinearLayout
+        android:id="@+id/llPagination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparentWhite"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/tvStyleRegular"
+            android:text="@string/loading_more"
+            android:textColor="@color/colorTextPrimary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNoDataFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_48"
+        android:layout_marginEnd="@dimen/margin_48"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icn_guest_user" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/tvStyleRegular"
+            android:gravity="center"
+            android:text="@string/no_data_found"
+            android:textColor="@color/colorTextPrimary" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAdd"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:text="@string/add_location"
+        android:textAllCaps="false"
+        app:icon="@drawable/icn_add_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

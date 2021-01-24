@@ -1,13 +1,14 @@
 <resources>
-    <string name="app_name">Food Delivery</string>
+    <string name="app_name">Mobiquity</string>
 
-    <string name="map_key" translatable="false">AIzaSyBnEVruXG2tdtbadZtqLwt9EmFI6XYEOV0</string>
+    <string name="map_key" translatable="false">AIzaSyCd4tHYqQjfAUd-3WVWoZ7u1kmVtNH5i5Y</string>
 
     <!--Exception message-->
     <string name="exception_error_network">Internet connection not found.</string>
     <string name="exception_error_server">Server is under maintenance, please try after some time.</string>
     <string name="exception_error_unparceble">Unknown data found from server.</string>
     <string name="exception_error_database">Database error</string>
+    <string name="city_not_found">Location not found!</string>
 
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
@@ -19,7 +20,41 @@
     <string name="restaurant_open">Restaurant is OPEN now</string>
     <string name="restaurant_closed">Restaurant is CLOSED!</string>
 
-    <string name="search_hint">Search for restaurants, cuisines...</string>
+    <string name="search_hint">Search by city name..</string>
     <string name="loading_more">Loading..</string>
+    <string name="no_data_found">No data found! \nPlease bookmark your favourite city.</string>
+    <string name="feel_like">Feels like %s</string>
+
+    <string name="permission_error">App requires permission to access future</string>
+    <string name="permission_storage">Allow access to photos</string>
+    <string name="permission_location">Allow access to your location</string>
+    <string name="permission_audio">Please grant audio permission for record your voice</string>
+    <string name="location_error">We are unable to find your device location, Kindly follow below steps to use the application.\n
+        - Restart the your device\n
+        - Make sure your device location is turned on\n
+        - Open Google Map application\n</string>
+    <string name="str_location_hint_1">Allow “Application” to access\nYour location?</string>
+    <string name="str_location_jint">We need to access your location to show you relevant search results</string>
+    <string name="str_location_fetching">Finding Location</string>
+    <string name="gps_permission_msg">GPS is disabled in your device. Would you like to enable it?</string>
+    <string name="settings">Settings</string>
+    <string name="confirm">Confirm</string>
+    <string name="add_location">Add Location</string>
+    <string name="temp_with_degree">%s°C</string>
+    <string name="temp_with_ferenhit">%s°F</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="wind">Wind</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="humidity">Humidity</string>
+    <string name="days">5 Days forecast</string>
+    <string name="cityname_empty">City name cannot be empty</string>
+    <string name="help">Help</string>
+    <string name="temprature_type">Temperature type</string>
+    <string name="metric">Metric</string>
+    <string name="imperial">Imperial</string>
+    <string name="save">Save</string>
+    <string name="save_successfully">Setting saved successfully!</string>
+    <string name="bookmark_warning">Are you sure do you want to remove from bookmark?</string>
 
 </resources>
